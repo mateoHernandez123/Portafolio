@@ -1,0 +1,600 @@
+<<<<<<< HEAD
+/* Estilo del contenedor de inicio de sesión */
+.login {
+    width: 350px;
+    height: 300px;
+    background: #2c2c2c;
+    padding: 47px;
+    padding-bottom: 50px;
+    color: #fdfdfd;
+    border-radius: 17px;
+    font-size: 1.3em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*
+-width, height: Establecen las dimensiones del 
+                contenedor de inicio de sesión.
+
+-background: Define el color de fondo.
+
+-padding: Añade espacio interno alrededor del contenido.
+
+-color: Define el color del texto.
+
+-border-radius: Aplica bordes redondeados.
+
+-font-size, font-family: Establecen el tamaño de fuente
+                         y la familia de fuente.
+
+*/
+
+/* Estilo para campos de entrada de texto y contraseña */
+.login input[type="text"],
+.login input[type="password"] {
+    opacity: 1;
+    display: block;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 13px 18px;
+    margin: 20px 0 0 0;
+    font-size: 0.8em;
+    border-radius: 100px;
+    background: #3c3c3c;
+    color: #fff;
+}
+
+/*
+-opacity: Hace que los campos de entrada sean completamente visibles.
+
+-display: Configura el tipo de visualización.
+
+-border, outline: Elimina bordes y contornos.
+
+-width: Establece el ancho al 100% del contenedor.
+
+-padding: Añade espacio interno a los campos de entrada.
+
+-margin: Establece los márgenes.
+
+-font-size: Define el tamaño de la fuente.
+
+-border-radius: Aplica bordes redondeados al campo de entrada.
+
+-background: Define el color de fondo.
+
+-color: Define el color del texto.
+
+*/
+
+/* Estilo de animación para campos de entrada al obtener foco */
+.login input:focus {
+    animation: bounce 1s;
+    appearance: none;
+    outline: none;
+}
+
+/*
+-animation: Aplica la animación bounce cuando el campo de entrada obtiene foco.
+
+-appearance, outline: Elimina los estilos predeterminados del navegador.
+
+*/
+
+/* Estilo para botones y encabezados */
+.login input[type="submit"],
+.login input[type="button"],
+.h1 {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 13px;
+    margin: 40px 0 0 0;
+    border-radius: 500px;
+    font-weight: 600;
+    animation: bounce2 1.4s;
+}
+
+/*
+-border, outline: Elimina bordes y contornos.
+
+-width, padding: Ajusta el ancho y el espaciado interno.
+
+-margin: Define los márgenes.
+
+-border-radius: Aplica bordes redondeados.
+
+-font-weight: Establece el grosor de la fuente.
+
+-animation: Aplica la animación bounce2.
+
+*/
+
+/* Estilo específico para el encabezado .h1 */
+.h1 {
+    padding: 0;
+    position: relative;
+    top: -35px;
+    display: block;
+    margin-bottom: 0px;
+    font-size: 1.3em;
+}
+
+/*
+-padding: Elimina el relleno.
+
+-position: Establece la posición relativa.
+
+-top: Desplaza el elemento hacia arriba.
+
+-display: Establece el tipo de visualización.
+
+-margin-bottom: Define el margen inferior.
+
+-font-size: Establece el tamaño de la fuente.
+
+*/
+
+/* Estilo para botones con la clase .btn */
+.btn {
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    color: #fff;
+    padding: 16px !important;
+    transition: all 0.4s ease;
+}
+
+/*
+-background: Aplica un degradado lineal como fondo del botón.
+
+-color: Establece el color del texto.
+
+-padding: Ajusta el espaciado interno.
+
+-transition: Agrega una transición para cambios de estilo suaves.
+
+*/
+
+
+/* Estilo para el botón cuando se realiza un hover */
+.btn:hover {
+    background: linear-gradient(144deg, #1e1e1e, 20%, #1e1e1e 50%, #1e1e1e);
+    color: rgb(255, 255, 255);
+    padding: 16px !important;
+    cursor: pointer;
+}
+
+/*
+-Define el estilo cuando el cursor está sobre el botón.
+
+-background: Cambia el degradado lineal del fondo.
+
+-color: Cambia el color del texto.
+
+-padding: Ajusta el espaciado interno.
+
+-cursor: Establece el cursor del mouse.-
+
+*/
+
+/* Estilo adicional para campos de entrada al obtener foco */
+.login input[type="text"],
+.login input[type="password"] {
+    animation: bounce 1s;
+    appearance: none;
+    outline: none;
+}
+
+/*
+-Aplica la animación bounce cuando los campos de entrada obtienen foco.
+
+-appearance, outline: Elimina los estilos predeterminados del navegador.
+*/
+
+/* Estilo para elementos con la clase .ui */
+.ui {
+    font-weight: bolder;
+    background: linear-gradient(#B563FF, #535EFC, #0EC8EE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(0.25turn, #535efc, #0EC8EE, #0EC8EE);
+    border-image-slice: 1;
+    display: inline;
+}
+
+/*
+-font-weight: Establece el grosor de la fuente.
+
+-background: Aplica un degradado lineal como fondo.
+
+-background-clip, color: Configuran el texto para ser transparente con un fondo degradado.
+
+-border-bottom: Agrega un borde inferior.
+
+-border-image, border-image-slice: Configuran una imagen de borde y su división.
+
+*/
+
+
+/* Estilo para la clase .log en dispositivos con un ancho máximo de 600px */
+@media only screen and (max-width: 600px) {
+    .log {
+        width: 70%;
+        padding: 3em;
+    }
+}
+/*
+-Aplica estilos específicos para la clase .log cuando la pantalla tiene un ancho máximo de 600px.
+
+-Ajusta el ancho y el relleno.
+
+*/
+
+/* Animaciones @keyframes */
+@keyframes bounce {
+    0% {
+        transform: translateY(-250px);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce2 {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+/*
+-Define dos animaciones bounce y bounce2 utilizando @keyframes.
+
+-Estas animaciones se aplican a elementos específicos con la propiedad animation.
+*/
+
+/* Estilo para la clase .img */
+.img {
+    animation: bounce2 1.4s;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 10px;
+    margin-top: -1100px;
+    left: 220px;
+    appearance: none;
+    outline: none;
+}
+/*
+-Aplica la animación bounce2 a elementos con la clase .img.
+
+-appearance, outline: Eliminan estilos predeterminados del navegador.
+
+-width, height: Establecen las dimensiones.
+
+-position: Establece la posición relativa.
+
+-margin, left, margin-top: Ajustan la posición y los márgenes.
+
+*/
+
+/* Estilo global para el cuerpo del documento */
+body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+}
+
+/*
+-Establece el fondo y la disposición del cuerpo del documento.
+
+-display, justify-content, align-items: Configuran el diseño flex.
+
+-height: Establece la altura al 100% de la ventana.
+
+-margin: Elimina los márgenes predeterminados.
+=======
+/* Estilo del contenedor de inicio de sesión */
+.login {
+    width: 350px;
+    height: 300px;
+    background: #2c2c2c;
+    padding: 47px;
+    padding-bottom: 50px;
+    color: #fdfdfd;
+    border-radius: 17px;
+    font-size: 1.3em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*
+-width, height: Establecen las dimensiones del 
+                contenedor de inicio de sesión.
+
+-background: Define el color de fondo.
+
+-padding: Añade espacio interno alrededor del contenido.
+
+-color: Define el color del texto.
+
+-border-radius: Aplica bordes redondeados.
+
+-font-size, font-family: Establecen el tamaño de fuente
+                         y la familia de fuente.
+
+*/
+
+/* Estilo para campos de entrada de texto y contraseña */
+.login input[type="text"],
+.login input[type="password"] {
+    opacity: 1;
+    display: block;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 13px 18px;
+    margin: 20px 0 0 0;
+    font-size: 0.8em;
+    border-radius: 100px;
+    background: #3c3c3c;
+    color: #fff;
+}
+
+/*
+-opacity: Hace que los campos de entrada sean completamente visibles.
+
+-display: Configura el tipo de visualización.
+
+-border, outline: Elimina bordes y contornos.
+
+-width: Establece el ancho al 100% del contenedor.
+
+-padding: Añade espacio interno a los campos de entrada.
+
+-margin: Establece los márgenes.
+
+-font-size: Define el tamaño de la fuente.
+
+-border-radius: Aplica bordes redondeados al campo de entrada.
+
+-background: Define el color de fondo.
+
+-color: Define el color del texto.
+
+*/
+
+/* Estilo de animación para campos de entrada al obtener foco */
+.login input:focus {
+    animation: bounce 1s;
+    appearance: none;
+    outline: none;
+}
+
+/*
+-animation: Aplica la animación bounce cuando el campo de entrada obtiene foco.
+
+-appearance, outline: Elimina los estilos predeterminados del navegador.
+
+*/
+
+/* Estilo para botones y encabezados */
+.login input[type="submit"],
+.login input[type="button"],
+.h1 {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 13px;
+    margin: 40px 0 0 0;
+    border-radius: 500px;
+    font-weight: 600;
+    animation: bounce2 1.4s;
+}
+
+/*
+-border, outline: Elimina bordes y contornos.
+
+-width, padding: Ajusta el ancho y el espaciado interno.
+
+-margin: Define los márgenes.
+
+-border-radius: Aplica bordes redondeados.
+
+-font-weight: Establece el grosor de la fuente.
+
+-animation: Aplica la animación bounce2.
+
+*/
+
+/* Estilo específico para el encabezado .h1 */
+.h1 {
+    padding: 0;
+    position: relative;
+    top: -35px;
+    display: block;
+    margin-bottom: 0px;
+    font-size: 1.3em;
+}
+
+/*
+-padding: Elimina el relleno.
+
+-position: Establece la posición relativa.
+
+-top: Desplaza el elemento hacia arriba.
+
+-display: Establece el tipo de visualización.
+
+-margin-bottom: Define el margen inferior.
+
+-font-size: Establece el tamaño de la fuente.
+
+*/
+
+/* Estilo para botones con la clase .btn */
+.btn {
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    color: #fff;
+    padding: 16px !important;
+    transition: all 0.4s ease;
+}
+
+/*
+-background: Aplica un degradado lineal como fondo del botón.
+
+-color: Establece el color del texto.
+
+-padding: Ajusta el espaciado interno.
+
+-transition: Agrega una transición para cambios de estilo suaves.
+
+*/
+
+
+/* Estilo para el botón cuando se realiza un hover */
+.btn:hover {
+    background: linear-gradient(144deg, #1e1e1e, 20%, #1e1e1e 50%, #1e1e1e);
+    color: rgb(255, 255, 255);
+    padding: 16px !important;
+    cursor: pointer;
+}
+
+/*
+-Define el estilo cuando el cursor está sobre el botón.
+
+-background: Cambia el degradado lineal del fondo.
+
+-color: Cambia el color del texto.
+
+-padding: Ajusta el espaciado interno.
+
+-cursor: Establece el cursor del mouse.-
+
+*/
+
+/* Estilo adicional para campos de entrada al obtener foco */
+.login input[type="text"],
+.login input[type="password"] {
+    animation: bounce 1s;
+    appearance: none;
+    outline: none;
+}
+
+/*
+-Aplica la animación bounce cuando los campos de entrada obtienen foco.
+
+-appearance, outline: Elimina los estilos predeterminados del navegador.
+*/
+
+/* Estilo para elementos con la clase .ui */
+.ui {
+    font-weight: bolder;
+    background: linear-gradient(#B563FF, #535EFC, #0EC8EE);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(0.25turn, #535efc, #0EC8EE, #0EC8EE);
+    border-image-slice: 1;
+    display: inline;
+}
+
+/*
+-font-weight: Establece el grosor de la fuente.
+
+-background: Aplica un degradado lineal como fondo.
+
+-background-clip, color: Configuran el texto para ser transparente con un fondo degradado.
+
+-border-bottom: Agrega un borde inferior.
+
+-border-image, border-image-slice: Configuran una imagen de borde y su división.
+
+*/
+
+
+/* Estilo para la clase .log en dispositivos con un ancho máximo de 600px */
+@media only screen and (max-width: 600px) {
+    .log {
+        width: 70%;
+        padding: 3em;
+    }
+}
+/*
+-Aplica estilos específicos para la clase .log cuando la pantalla tiene un ancho máximo de 600px.
+
+-Ajusta el ancho y el relleno.
+
+*/
+
+/* Animaciones @keyframes */
+@keyframes bounce {
+    0% {
+        transform: translateY(-250px);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce2 {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+}
+/*
+-Define dos animaciones bounce y bounce2 utilizando @keyframes.
+
+-Estas animaciones se aplican a elementos específicos con la propiedad animation.
+*/
+
+/* Estilo para la clase .img */
+.img {
+    animation: bounce2 1.4s;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 10px;
+    margin-top: -1100px;
+    left: 220px;
+    appearance: none;
+    outline: none;
+}
+/*
+-Aplica la animación bounce2 a elementos con la clase .img.
+
+-appearance, outline: Eliminan estilos predeterminados del navegador.
+
+-width, height: Establecen las dimensiones.
+
+-position: Establece la posición relativa.
+
+-margin, left, margin-top: Ajustan la posición y los márgenes.
+
+*/
+
+/* Estilo global para el cuerpo del documento */
+body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+}
+
+/*
+-Establece el fondo y la disposición del cuerpo del documento.
+
+-display, justify-content, align-items: Configuran el diseño flex.
+
+-height: Establece la altura al 100% de la ventana.
+
+-margin: Elimina los márgenes predeterminados.
+>>>>>>> 73a552d41112a9575c264da40de9332ca15c8ba5
+*/
