@@ -128,14 +128,16 @@ const ProjectSlider: React.FC = () => {
                       </div>
                     </div>
                     <div className="buttons flex gap-10">
-                      <Button
-                        label="Live Demo"
-                        link={project.deploymenturl}
-                        iconSVG={project.deploymenticon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                        onClick={notifyServerRequest}
-                      />
+                      {/*
+                        <Button
+                          label="Live Demo"
+                          link={project.deploymenturl}
+                          iconSVG={project.deploymenticon}
+                          buttoncolor={project.colors.main}
+                          iconcolor={project.colors.icon}
+                          onClick={notifyServerRequest}
+                        />
+                      */}
                       <Button
                         label="Github Repository"
                         link={project.githuburl}

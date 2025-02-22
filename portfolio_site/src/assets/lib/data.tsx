@@ -3,11 +3,12 @@ import canvaicon from "../../assets/icons/canvaicon.svg";
 import figmaicon from "../../assets/icons/figmaicon.svg";
 import htmlicon from "../../assets/icons/htmlicon.svg";
 import cssicon from "../../assets/icons/cssicon.svg";
+import materialicon from "../../assets/icons/materialui.webp";
 import javascripticon from "../../assets/icons/javascripticon.svg";
 import typescripticon from "../../assets/icons/typescripticon.svg";
 import reacticon from "../../assets/icons/reacticon.svg";
 import nextjsicon from "../../assets/icons/nextjsicon.svg";
-import nodejsicon from "../../assets/icons/nodejsicon.svg";
+import nodejsicon from "../../assets/icons/nodejs.webp";
 import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
 import mongodbicon from "../../assets/icons/mongoicon.svg";
 import vuejsicon from "../../assets/icons/vueicon.svg";
@@ -20,12 +21,15 @@ import spotifyicon from "../../assets/icons/spotifyicon.svg";
 import netlifyicon from "../../assets/icons/netlifyicon.svg";
 import rendericon from "../../assets/icons/rendericon.svg";
 import jwticon from "../../assets/icons/jwticon.svg";
+import javaicon from "../../assets/icons/java.webp";
 import wordpressicon from "../../assets/icons/wordpressicon.svg";
 import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
 import tastyMockup from "../../assets/img/tasty_mockup.webp";
 import instorMockup from "../../assets/img/instor_mockup.webp";
 import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
+import refugioAjpa from "../../assets/img/refugioAjpa.jpg";
+import abelHernandez from "../../assets/img/AbelHernandezMotosWeb.jpg";
 import profilepicture from "../img/me2.webp";
 import caricon from "../../assets/icons/car-icon.svg";
 import travelicon from "../../assets/icons/travel-icon.svg";
@@ -42,7 +46,7 @@ export const headerIntroData = {
     de: "Hola, soy Mateo",
     en: "Hi, I'm Mateo",
   },
-  subtitle: "FrontEnd Developer ",
+  subtitle: "FrontEnd Developer",
   description: {
     de: "Soy Mateo, desarrollador Front-End con pasión por el diseño y la creación de sistemas de gestión y páginas web. Me gusta transformar ideas en experiencias visuales y funcionales, siempre buscando la mejor manera de estructurar y modelar cada proyecto. Creo que una comunicación fluida y el trabajo en equipo son clave para lograr objetivos claros y exitosos, y disfruto colaborar para alcanzar resultados que realmente impacten.",
     en: "I’m Mateo, a Front-End developer with a passion for designing and creating management systems and websites. I enjoy transforming ideas into visual and functional experiences, always looking for the best way to structure and model each project. I believe that smooth communication and teamwork are key to achieving clear and successful goals, and I enjoy collaborating to deliver results that truly make an impact.",
@@ -72,25 +76,26 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
-    title: "Tasty App",
+    title: "Sistema Contable",
     description:
-      "Una aplicación de recetas que construimos en equipo con React y la API MealDB. Yo era el desarrollador front-end y programé funciones como Búsqueda por voz e Imprimir a PDF. El diseño fue creado con Figma. El sitio web es responsivo y está optimizado para dispositivos móviles.",
+      "Una web para realizar registros contables y abastecimientos que construimos en equipo con React js y Node js. Yo era el desarrollador front-end y programé funciones filtrado de productos, carga de cuentas y asientos, etc. El diseño fue creado por nosotros. El sitio web es dinamico y está optimizado para ser lo más comodo para el usuario final.",
     description_EN:
-      "A recipe app that we built as a team with React and the MealDB API. I was the front-end developer and programmed features like voice search or print to PDF. The design was created with Figma. The website is responsive and mobile-optimized.",
+      "A website for accounting records and supplies that we built as a team using React.js and Node.js. I was the front-end developer and programmed functions for product filtering, account and entry management, etc. The design was created by us. The website is dynamic and optimized to be as user-friendly as possible.",
     technologies: [
       { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
+      { name: "Material UI", icon: materialicon },
       { name: "JavaScript", icon: javascripticon },
-      { name: "REST Api", icon: apiicon },
       { name: "React", icon: reacticon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Canva", icon: canvaicon },
-      { name: "Netlify", icon: netlifyicon },
-      { name: "Trello", icon: trelloicon },
+      { name: "Node js", icon:nodejsicon},
+      {name: "Express", icon: expressicon},
+      // { name: "REST Api", icon: apiicon },
+      // { name: "Figma", icon: figmaicon },
+      // { name: "Canva", icon: canvaicon },
+      // { name: "Netlify", icon: netlifyicon },
+      // { name: "Trello", icon: trelloicon },
     ],
-    image: tastyMockup,
-    deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
-    githuburl: "https://github.com/AlpayC/Frontend_Abschlussprojekt_Tasty",
+    image: abelHernandez,
+    githuburl: "https://github.com/mateoHernandez123/Abel-Hernandez-motos",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -101,29 +106,30 @@ export const projectsData = [
     },
   },
   {
-    title: "Silentmoon",
+    title: "Refugio AJPA",
     description:
-      "Una aplicación de yoga y meditación que construimos en equipo con React, MongoDB, Express y Node.js. Mi tarea como Gitmaster y desarrollador backend fue programar el backend con una conexión usando una API Restful y modelar la base de datos en MongoDB.",
+      "Una web de refugio de perros construimos en equipo con React, Bootstrap y Java. Mi tarea fue trabajar de FrtontEnd, desarrollando cada pestaña con su diseño para que sea lo más amigable a cualquiera persona que acceda a la web, y por otro lado, un sistema interno para los administradores, donde puedan gestionar los perros.",
     description_EN:
       "A yoga and meditation app that we built as a team with React, MongoDB, Express and Node.js. My task as a gitmaster and backend developer was to program the backend with connection using a restful API and to model the database in MongoDB.",
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
       { name: "JavaScript", icon: javascripticon },
-      { name: "Spotify Api", icon: spotifyicon },
+      // { name: "Spotify Api", icon: spotifyicon },
       { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
+      // { name: "JWT", icon: jwticon },
+      {name: "Java", icon: javaicon},
+      // { name: "Axios", icon: axiosicon },
+      // { name: "MongoDB", icon: mongodbicon },
+      // { name: "Express", icon: expressiconwhite },
+      // { name: "Node.js", icon: nodejsicon },
+      // { name: "Figma", icon: figmaicon },
+      // { name: "Render", icon: rendericon },
     ],
-    image: silentmoonMockup,
+    image: refugioAjpa,
     deploymenturl: "https://silentmoon-grpw.onrender.com/",
     githuburl:
-      "https://github.com/AlpayC/Fullstack_Abschlussprojekt_SilentMoon",
+      "https://github.com/MatiasFochiUNNOBA/frontAJPA",
     githubicon: FiGithub,
     deploymenticon: FiLink,
     colors: {
@@ -305,12 +311,12 @@ export const navLinks = [
 ] as const;
 
 export const FooterLinks = [
-  { de: "Impressum", en: "Imprint", hash: "#imprint", data: <Imprint /> },
-  { de: "Datenschutz", en: "Privacy", hash: "#privacy", data: <Privacy /> },
+  { de: "imprimir", en: "Imprint", hash: "#imprint", data: <Imprint /> },
+  { de: "Protección de datos", en: "Privacy", hash: "#privacy", data: <Privacy /> },
 ] as const;
 
 export const sideBarRightMail = {
-  link: "mateo.e.2003hernandez@gmail.com",
+  link: "mailto:mateo.e.2003hernandez@gmail.com",
   text: "myemail@com",
 } as const;
 
@@ -326,7 +332,7 @@ export const sideBarLeftSocials = [
     altimgname: "github",
   },
   {
-    link: "mateo.e.2003hernandez@gmail.com",
+    link: "mailto:mateo.e.2003hernandez@gmail.com",
     icon: FiMail,
     altimgname: "mail",
   },
