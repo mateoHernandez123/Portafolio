@@ -30,21 +30,28 @@ export default function LanguageContextProvider({
     }
   };
 
+  // useEffect(() => {
+  //   const localLanguage = window.localStorage.getItem(
+  //     "language"
+  //   ) as language | null;
+
+  //   if (localLanguage) {
+  //     setLanguage(localLanguage);
+
+  //     if (localLanguage === "DE") {
+  //       document.documentElement.classList.add("DE");
+  //     }
+  //   } else if (window.matchMedia("(prefers-color-scheme: DE)").matches) {
+  //     setLanguage("DE");
+  //     document.documentElement.classList.add("DE");
+  //   }
+  // }, []);
+
   useEffect(() => {
-    const localLanguage = window.localStorage.getItem(
-      "language"
-    ) as language | null;
-
-    if (localLanguage) {
-      setLanguage(localLanguage);
-
-      if (localLanguage === "DE") {
-        document.documentElement.classList.add("DE");
-      }
-    } else if (window.matchMedia("(prefers-color-scheme: DE)").matches) {
-      setLanguage("DE");
-      document.documentElement.classList.add("DE");
-    }
+    // Siempre establece el idioma en "EN" al cargar la página
+    setLanguage("EN");
+    window.localStorage.setItem("language", "EN");
+    document.documentElement.classList.remove("DE");
   }, []);
 
   return (

@@ -1,5 +1,5 @@
 import bannerBg from "../assets/img/bannerbg.webp";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Button from "./Button";
 import LiveTicker from "./ParallaxText";
 import { projectsData, toastMessages } from "../assets/lib/data";
@@ -25,6 +25,32 @@ const ProjectSlider: React.FC = () => {
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+
+  const openModal = (index: number) => {
+    setSelectedImage(projectsData[index].image);
+    setCurrentIndex(index);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  const nextImage = () => {
+    const newIndex = (currentIndex + 1) % projectsData.length;
+    setCurrentIndex(newIndex);
+    setSelectedImage(projectsData[newIndex].image);
+  };
+
+  const prevImage = () => {
+    const newIndex = (currentIndex - 1 + projectsData.length) % projectsData.length;
+    setCurrentIndex(newIndex);
+    setSelectedImage(projectsData[newIndex].image);
+  };
+  
+  
+  
   const notifyServerRequest = () => {
     if (language === "DE") {
       toast.info(toastMessages.loadingProject.de);
@@ -73,11 +99,11 @@ const ProjectSlider: React.FC = () => {
             >
               <p className="text-[--white] mt-16 mb-6">
                 <span className="text-[--orange]">&lt;</span>
-                {language === "DE" ? "Projekte" : "Projects"}
+                {language === "DE" ? "Proyectos" : "Projects"}
                 <span className="text-[--orange]">/&gt;</span>
               </p>
               <h2 className="text-[--white] mb-16">
-                {language === "DE" ? "Meine Projekte" : "My Projects"}
+                {language === "DE" ? "Mis Proyectos" : "My Projects"}
               </h2>
             </motion.div>
             <Swiper
@@ -110,7 +136,7 @@ const ProjectSlider: React.FC = () => {
                     </p>
                     <div className="technologies">
                       <h3>
-                        {language === "DE" ? "Technologien" : "Technologies"}
+                        {language === "DE" ? "Technologías" : "Technologies"}
                       </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
                         {project.technologies.map(
@@ -147,13 +173,13 @@ const ProjectSlider: React.FC = () => {
                       />
                     </div>
                   </div>
-
-                  <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
+                  
+                  <div className="top-6 right-content relative h-[25rem] overflow-hidden rounded-xl w-[60%] transition-all duration-200 shadow-2xl">
                     <img
                       src={project.image}
                       alt={`${project.title}-project-mockup`}
-                      className={`w-full h-auto transition-all duration-[6000ms] transform opacity-100 hover:translate-y-[-50%] 
-                      `}
+                      className="w-full h-auto cursor-pointer transition-all duration-200"
+                      onClick={() => openModal(index)}
                     />
                   </div>
                 </SwiperSlide>
@@ -167,17 +193,18 @@ const ProjectSlider: React.FC = () => {
                 <h2 className="text-white">{project.title}</h2>
                 <img
                   src={project.image}
-                  alt={project.image}
-                  className="h-[35vh] w-full object-cover object-top rounded-3xl"
+                  alt={project.title}
+                  className="h-[35vh] w-full object-cover rounded-3xl cursor-pointer"
+                  onClick={() => openModal(index)}
                 />
                 <div className="buttons flex gap-10 max-lg:flex-col">
-                  <Button
+                  {/* <Button
                     label="Live Demo"
                     link={project.deploymenturl}
                     iconSVG={project.deploymenticon}
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
-                  />
+                  /> */}
                   <Button
                     label="Github Repository"
                     link={project.githuburl}
@@ -194,7 +221,7 @@ const ProjectSlider: React.FC = () => {
 
                 <div className="technologies">
                   <h3 className="text-white">
-                    {language === "DE" ? "Technologien" : "Technologies"}
+                    {language === "DE" ? "Tecnologías" : "Technologies"}
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(
@@ -225,6 +252,21 @@ const ProjectSlider: React.FC = () => {
           backgroundColor: "var(--orange)",
         }}
       />
+       {/* Modal para mostrar la imagen seleccionada */}
+      {selectedImage && (
+        <div className="fixed inset-0 flex items-center top-24 justify-center bg-black bg-opacity-80">
+          <div className="relative p-4 bg-transparent rounded-lg">
+            <button className="absolute top-2 right-2 text-black text-4xl" onClick={closeModal}>
+              ✖
+            </button>
+            <img src={selectedImage} alt="Project Preview" className="max-w-[80vw] max-h-[80vh] rounded-lg" />
+            <div className="flex justify-between mt-4">
+              <button onClick={prevImage} className="px-4 py-2 bg-gray-700 text-white rounded">◀</button>
+              <button onClick={nextImage} className="px-4 py-2 bg-gray-700 text-white rounded">▶</button>
+            </div>
+          </div>
+        </div>
+      )}
     </React.Fragment>
   );
 };

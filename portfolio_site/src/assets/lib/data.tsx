@@ -1,45 +1,50 @@
 import adobexdicon from "../../assets/icons/adobexdicon.svg";
-import canvaicon from "../../assets/icons/canvaicon.svg";
-import figmaicon from "../../assets/icons/figmaicon.svg";
-import htmlicon from "../../assets/icons/htmlicon.svg";
-import cssicon from "../../assets/icons/cssicon.svg";
-import materialicon from "../../assets/icons/materialui.webp";
-import javascripticon from "../../assets/icons/javascripticon.svg";
-import typescripticon from "../../assets/icons/typescripticon.svg";
-import reacticon from "../../assets/icons/reacticon.svg";
-import nextjsicon from "../../assets/icons/nextjsicon.svg";
-import nodejsicon from "../../assets/icons/nodejs.webp";
-import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
-import mongodbicon from "../../assets/icons/mongoicon.svg";
 import vuejsicon from "../../assets/icons/vueicon.svg";
-import expressicon from "../../assets/icons/expressicon.svg";
-import sassscssicon from "../../assets/icons/sassicon.svg";
-import trelloicon from "../../assets/icons/trelloicon.svg";
-import apiicon from "../../assets/icons/apiicon.svg";
-import axiosicon from "../../assets/icons/axiosicon.svg";
-import spotifyicon from "../../assets/icons/spotifyicon.svg";
-import netlifyicon from "../../assets/icons/netlifyicon.svg";
-import rendericon from "../../assets/icons/rendericon.svg";
-import jwticon from "../../assets/icons/jwticon.svg";
-import javaicon from "../../assets/icons/java.webp";
 import wordpressicon from "../../assets/icons/wordpressicon.svg";
 import shopifyicon from "../../assets/icons/shopifyicon.svg";
 import webflowicon from "../../assets/icons/webflowicon.svg";
 import tastyMockup from "../../assets/img/tasty_mockup.webp";
+import Imprint from "../../components/Imprint";
+import Privacy from "../../components/Privacy";
 import instorMockup from "../../assets/img/instor_mockup.webp";
 import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
+import nextjsicon from "../../assets/icons/nextjsicon.svg";
+import netlifyicon from "../../assets/icons/netlifyicon.svg";
+import rendericon from "../../assets/icons/rendericon.svg";
+import jwticon from "../../assets/icons/jwticon.svg";
+import sassscssicon from "../../assets/icons/sassicon.svg";
+import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
+import trelloicon from "../../assets/icons/trelloicon.svg";
+import apiicon from "../../assets/icons/apiicon.svg";
+import axiosicon from "../../assets/icons/axiosicon.svg";
+import canvaicon from "../../assets/icons/canvaicon.svg";
+import figmaicon from "../../assets/icons/figmaicon.svg";
+import htmlicon from "../../assets/icons/htmlicon.svg";
+import cssicon from "../../assets/icons/cssicon.svg";
+import angularicon from "../../assets/icons/angularjs.svg";
+import materialicon from "../../assets/icons/materialui.svg";
+import javascripticon from "../../assets/icons/javascripticon.svg";
+import typescripticon from "../../assets/icons/typescripticon.svg";
+import reacticon from "../../assets/icons/reacticon.svg";
+import postgresqlicon from "../../assets/icons/postgresql.svg";
+import nodejsicon from "../../assets/icons/nodejs.svg";
+import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
+import mongodbicon from "../../assets/icons/mongoicon.svg";
+import springbooticon from "../../assets/icons/springboot.svg";
+import mysqlicon from "../../assets/icons/mysql.svg";
+import expressicon from "../../assets/icons/expressicon.svg";
+import spotifyicon from "../../assets/icons/spotifyicon.svg";
+import javaicon from "../../assets/icons/java.svg";
+import appMusic from "../../assets/img/appmusic.jpg";
 import refugioAjpa from "../../assets/img/refugioAjpa.jpg";
 import abelHernandez from "../../assets/img/AbelHernandezMotosWeb.jpg";
-import profilepicture from "../img/me2.webp";
+import profilepicture from "../img/me2.jpg";
 import caricon from "../../assets/icons/car-icon.svg";
 import travelicon from "../../assets/icons/travel-icon.svg";
 import hardwareicon from "../../assets/icons/hardware-icon.svg";
-import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
 import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
-import Imprint from "../../components/Imprint";
-import Privacy from "../../components/Privacy";
 
 export const headerIntroData = {
   title: {
@@ -88,6 +93,7 @@ export const projectsData = [
       { name: "React", icon: reacticon },
       { name: "Node js", icon:nodejsicon},
       {name: "Express", icon: expressicon},
+      { name: "Mysql", icon: mysqlicon },
       // { name: "REST Api", icon: apiicon },
       // { name: "Figma", icon: figmaicon },
       // { name: "Canva", icon: canvaicon },
@@ -114,11 +120,12 @@ export const projectsData = [
     technologies: [
       { name: "Html", icon: htmlicon },
       { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      // { name: "Spotify Api", icon: spotifyicon },
-      { name: "React", icon: reacticon },
-      // { name: "JWT", icon: jwticon },
+      { name: "React JS", icon: reacticon },
       {name: "Java", icon: javaicon},
+      { name: "Mysql", icon: mysqlicon },
+      // { name: "JavaScript", icon: javascripticon },
+      // { name: "Spotify Api", icon: spotifyicon },
+      // { name: "JWT", icon: jwticon },
       // { name: "Axios", icon: axiosicon },
       // { name: "MongoDB", icon: mongodbicon },
       // { name: "Express", icon: expressiconwhite },
@@ -140,27 +147,31 @@ export const projectsData = [
     },
   },
   {
-    title: "Furniture Organizer",
+    title: "App Music",
     description:
-      "Una aplicación organizadora de muebles que programamos en equipo con React, MongoDB, Express y Node.js. Como Gitmaster, fui responsable de vincular el frontend con el backend y del modelado de la base de datos. La aplicación es responsiva y está optimizada para dispositivos móviles.",
+      "Una aplicación de musica que programamos en equipo con Angular 19, Spring Boot y Mysql. Fui responsable de realizar tareas de diseño, vincular el frontend con el backend y del modelado de la base de datos. La aplicación es responsiva y está optimizada para dispositivos móviles.",
     description_EN:
-      "A furniture organizer app that we programmed as a duo team with React, MongoDB, Express and Node.js. As a gitmaster, I took over the connection of the frontend to the backend and the database modeling. The app is responsive and mobile-optimized.",
+      "A music application that we programmed as a team using Angular 19, Spring Boot, and MySQL. I was responsible for design tasks, linking the frontend with the backend, and modeling the database. The application is responsive and optimized for mobile devices.",
     technologies: [
       { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
-      { name: "Trello", icon: trelloicon },
+      { name: "Angular", icon: angularicon },
+      { name:"Tailwind", icon: tailwindcssicon },
+      { name: "Mysql", icon: mysqlicon },
+      { name: "Spotify Api", icon: spotifyicon },
+      { name:"Spring Boot", icon: springbooticon },
+      // { name: "JavaScript", icon: javascripticon },
+      // { name: "CSS", icon: cssicon },
+      // { name: "JWT & Bcrypt", icon: jwticon },
+      // { name: "Axios", icon: axiosicon },
+      // { name: "MongoDB", icon: mongodbicon },
+      // { name: "Express", icon: expressiconwhite },
+      // { name: "Node.js", icon: nodejsicon },
+      // { name: "Figma", icon: figmaicon },
+      // { name: "Render", icon: rendericon },
+      // { name: "Trello", icon: trelloicon },
     ],
-    image: instorMockup,
-    deploymenturl: "https://mern-haushaltsbuch.onrender.com/",
+    image: appMusic,
+    deploymenturl: "",
     githuburl: "https://github.com/mateoHernandez123",
     githubicon: FiGithub,
     deploymenticon: FiLink,
@@ -214,12 +225,12 @@ export const skillsDataWeb = [
         icon: reacticon,
         color: "#61DAFB",
       },
-      {
-        title: "Next.js",
-        hash: "#Next.js",
-        icon: [nextjsicon, nextjsiconwhite],
-        color: ["#000000", "#FFFFFF"],
-      },
+      // {
+      //   title: "Next.js",
+      //   hash: "#Next.js",
+      //   icon: [nextjsicon, nextjsiconwhite],
+      //   color: ["#000000", "#FFFFFF"],
+      // },
       {
         title: "Node.js",
         hash: "#Node.js",
@@ -227,35 +238,41 @@ export const skillsDataWeb = [
         color: "#339933",
       },
       {
-        title: "Tailwind",
-        hash: "#Tailwind",
-        icon: tailwindcssicon,
-        color: "#38B2AC",
+        title: "Java",
+        hash: "#Java",
+        icon: javaicon,
+        color: "#FFFFFF",
       },
       {
-        title: "MongoDB",
-        hash: "#MongoDB",
-        icon: mongodbicon,
-        color: "#449C45",
+        title: "Angular",
+        hash: "#Angular",
+        icon: angularicon,
+        color: "#F1662A",
       },
       {
-        title: "Vue.js",
-        hash: "#Vue.js",
-        icon: vuejsicon,
-        color: "#4FC08D",
+        title: "Spring Boot",
+        hash: "#SpringBoot",
+        icon: springbooticon,
+        color: "#339933",
       },
+      // {
+      //   title: "Vue.js",
+      //   hash: "#Vue.js",
+      //   icon: vuejsicon,
+      //   color: "#4FC08D",
+      // },
       {
         title: "Express",
         hash: "#Express",
         icon: [expressicon, expressiconwhite],
         color: ["#000000", "#FFFFFF"],
       },
-      {
-        title: "SASS/SCSS",
-        hash: "#SASS/SCSS",
-        icon: sassscssicon,
-        color: "#CC6699",
-      },
+      // {
+      //   title: "SASS/SCSS",
+      //   hash: "#SASS/SCSS",
+      //   icon: sassscssicon,
+      //   color: "#CC6699",
+      // },
     ],
   },
 ] as const;
@@ -265,39 +282,75 @@ export const skillsDataDesign = [
     skillsTitle: "Design",
     skills: [
       { title: "Figma", hash: "#Figma", icon: figmaicon, color: "#F24E1E" },
-      {
-        title: "Adobe XD",
-        hash: "#Adobe XD",
-        icon: adobexdicon,
-        color: "#FF61F6",
-      },
+      // {
+      //   title: "Adobe XD",
+      //   hash: "#Adobe XD",
+      //   icon: adobexdicon,
+      //   color: "#FF61F6",
+      // },
       { title: "Canva", hash: "#Canva", icon: canvaicon, color: "#00C4CC" },
+      {
+        title: "Tailwind",
+        hash: "#Tailwind",
+        icon: tailwindcssicon,
+        color: "#38B2AC",
+      },
+      {
+        title: "CSS",
+        hash: "#CSS",
+        icon: cssicon,
+        color: "#1572B6",
+      },
+       {
+        title: "Material UI",
+        hash: "#MaterialUI",
+        icon: materialicon,
+        color: "#0081CB",
+      },
     ],
   },
 ] as const;
 
 export const skillsDataCMS = [
   {
-    skillsTitle: "CMS",
+    skillsTitle: "DataBase",
     skills: [
       {
-        title: "WordPress",
-        hash: "#WordPress",
-        icon: wordpressicon,
-        color: "#21759B",
+        title: "MySQL",
+        hash: "#Mysql",
+        icon: mysqlicon,
+        color: "#38B2AC",
       },
       {
-        title: "Shopify",
-        hash: "#Shopify",
-        icon: shopifyicon,
-        color: "#7AB55C",
+        title: "MongoDB",
+        hash: "#MongoDB",
+        icon: mongodbicon,
+        color: "#449C45",
       },
       {
-        title: "Webflow",
-        hash: "#Webflow",
-        icon: webflowicon,
-        color: "#4353FF",
+        title: "PostgreSQL",
+        hash: "#PostgreSQL",
+        icon: postgresqlicon,
+        color: "#38B2AC",
       },
+      // {
+      //   title: "WordPress",
+      //   hash: "#WordPress",
+      //   icon: wordpressicon,
+      //   color: "#21759B",
+      // },
+      // {
+      //   title: "Shopify",
+      //   hash: "#Shopify",
+      //   icon: shopifyicon,
+      //   color: "#7AB55C",
+      // },
+      // {
+      //   title: "Webflow",
+      //   hash: "#Webflow",
+      //   icon: webflowicon,
+      //   color: "#4353FF",
+      // },
     ],
   },
 ] as const;
@@ -311,8 +364,8 @@ export const navLinks = [
 ] as const;
 
 export const FooterLinks = [
-  { de: "imprimir", en: "Imprint", hash: "#imprint", data: <Imprint /> },
-  { de: "Protección de datos", en: "Privacy", hash: "#privacy", data: <Privacy /> },
+  // { de: "imprimir", en: "Imprint", hash: "#imprint", data: <Imprint /> },
+  // { de: "Protección de datos", en: "Privacy", hash: "#privacy", data: <Privacy /> },
 ] as const;
 
 export const sideBarRightMail = {
@@ -462,7 +515,7 @@ export const contactData = {
   },
   button: {
     value: {
-      de: "Absenden",
+      de: "Enviar",
       en: "Send",
     },
   },
