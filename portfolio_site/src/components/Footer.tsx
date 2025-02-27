@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
             }
           >
             {typeof social.icon === "function" ? (
-              <social.icon className={`stroke-orange`} />
+              <social.icon className={`stroke-orange`} size={30} />
             ) : (
               <img
                 src={social.icon}

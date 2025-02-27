@@ -301,7 +301,7 @@ export const skillsDataDesign = [
         icon: cssicon,
         color: "#1572B6",
       },
-       {
+      {
         title: "Material UI",
         hash: "#MaterialUI",
         icon: materialicon,
@@ -456,7 +456,7 @@ export const contactData = {
     en: "Contact",
   },
   description: {
-    de: "Escríbeme un mensaje y me pondré en contacto contigo.",
+    de: "Escríbeme un mensaje y me pondré en contacto con vos.",
     en: "Write me a message and I will get back to you.",
   },
   inputfields: [
